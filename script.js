@@ -22,7 +22,7 @@ tl.from(".line1-part1",{
     }
 })
 tl.to(".line h2",{
-    animationName:"anime",
+    animationName:"loaderAnime",
     opacity:1
 })
 tl.to("#loader",{

@@ -28,7 +28,7 @@ body{
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 99;
+    z-index: 9999;
     background-color: #030303;
     padding: 25vh 10vw;
 }
@@ -69,7 +69,7 @@ body{
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
-@keyframes anime {
+@keyframes loaderAnime {
     0%{
         font-family: "Plain Light";
         -webkit-text-stroke: 1px #fff;
@@ -102,10 +102,13 @@ body{
 #main{
     position: relative;
     background-color:#101112 ;
+    z-index: 99;
 }
 .page1{
     height: 100vh;
     width: 100%;
+    position: relative;
+    z-index: 100;
 }
 .page1 #nav{
     display: flex;
@@ -127,7 +130,7 @@ body{
     /* background-color: red; */
     width: 73%;
     margin-left: 27%;
-    overflow: hidden;
+    overflow-y: hidden;
     display: flex;
     align-items: center;
 }
@@ -140,7 +143,18 @@ body{
     font-weight: 600;
     text-transform: uppercase;
     line-height: 7.2vw;
+    position: relative;
 }
+#hero1::before {
+    content: "01";
+    position: absolute;
+    font-size: 3.3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: 21%;
+    top: 31%;
+}
+
 .hero h2{
     color: #E8E6E3;
     font-size: 7.2vw;
@@ -224,6 +238,16 @@ body{
 #page4-content h1{
     font-size: 7vw;
     text-transform: uppercase;
+    position: relative;
+}
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3.5vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
 }
 #page4-content .underline{
     /* height: 0.104vw; */
@@ -283,4 +307,120 @@ body{
 .page5{
     min-height: 100vh;
     width: 100%;
+    position: relative;
+}
+.elm{
+    /* background-color: red; */
+    white-space: nowrap;
+    margin-bottom: -2vw;
+}
+.elm h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    color: transparent;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: move;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.elm2{
+    /* background-color: red; */
+    white-space: nowrap;
+    margin-bottom: -2vw;
+}
+.elm2 h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    color: transparent;
+    text-transform: uppercase;
+    display: inline-block;
+    /* margin-right: 1vw; */
+    transform: translateX(calc(-100% - 20px));
+    animation-name: move;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+@keyframes move{ 
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }   
+}
+.elm span{
+    font-style: italic;
+    font-family: "silk serif";
+    color: transparent;
+}
+.elm2 span{
+    font-style: italic;
+    font-family: "silk serif";
+    color: transparent;
+}
+#footer{
+    height: 80vh;
+    widows: 100%;
+    /* background-color: red; */
+    position: relative;
+    padding-left: 28vw;
+}
+#footer h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    color: #E8E6E3;
+    font-weight: 600;
+    /* background-color: blue; */
+    position: relative;
+}
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 3.5vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: -12%;
+    top: 8%;
+}
+.underline{
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    margin: 2vw 0;
+}
+#footer-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 15vw;
+    padding-top: 4vw;
+    margin-bottom: 6vw;
+}
+#footer-div h6{
+    font-size: 1vw;
+    margin-bottom: 1.5vw;
+}
+.box{
+    width: 20%;
+}
+#footer-div h5{
+    color: #E8E6E3; 
+    font-size: 2vw;
+    font-weight: 400;
+    line-height: 1;
+}
+#footer-div h5{
+    font-size: 1.4vw;
+    font-weight: 500;
+}
+#footer>h5{
+    font-weight: 500;
+    font-size: 1vw;
 }
